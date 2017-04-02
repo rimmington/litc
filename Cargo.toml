@@ -1,0 +1,13 @@
+[package]
+name = "litc"
+version = "0.1.0"
+authors = ["vagrant"]
+build = "build.rs"
+
+[dependencies]
+combine = "~2.2.2"
+walkdir = "1"
+
+[build-dependencies]
+combine = "2.2.2"
+walkdir = "1"
