@@ -1,4 +1,4 @@
-{rustPlatform}:
+{rustPlatform, linuxHeaders}:
 
 rustPlatform.buildRustPackage {
   name = "litc";
@@ -8,4 +8,6 @@ rustPlatform.buildRustPackage {
   checkPhase = "cargo test --lib"; # No exe tests
 
   shellHook = "unset SSL_CERT_FILE";  # https://github.com/NixOS/nixpkgs/issues/13744
+
+  C_INCLUDE_PATH="${linuxHeaders}/include";
 }
